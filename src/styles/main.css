@@ -1,0 +1,319 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0400ff;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de la página principal */
+.home {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pokemon-card {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 150px;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card h3 {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.pokemon-type {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Página de detalles */
+.pokemon-detail {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.pokemon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.pokemon-info {
+  text-align: right;
+}
+
+.pokemon-info h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.pokemon-id {
+  font-size: 16px;
+  color: #888;
+}
+
+.pokemon-types {
+  margin-top: 10px;
+}
+
+.type {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.type.grass {
+  background-color: #7ac74c;
+}
+
+.type.fire {
+  background-color: #f7a74c;
+}
+
+.type.water {
+  background-color: #4f94d4;
+}
+
+/* Sección de detalles */
+.pokemon-details {
+  margin-top: 40px; /* Se añadió margen superior para que no se tape */
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stats-section {
+  margin-top: 40px; /* Se añadió margen superior para que no se tape */
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Elemento individual de cada estadística */
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Barra de la estadística */
+.stat-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Relleno de la barra de la estadística */
+.stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #3b82f6, #60a5fa); /* Degradado de azul */
+  border-radius: 5px;
+  transition: width 1s ease-in-out; /* Animación suave cuando carga */
+  width: 0; /* Inicialmente la barra está vacía */
+}
+
+/* Keyframe para la animación de la barra de estadísticas */
+@keyframes fillStat {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--stat-width);
+  }
+}
+
+/* Botón "Volver" en la página de detalles */
+.back-button {
+  padding: 8px 16px;
+  background-color: #28a745; /* Verde */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+
+/* Favoritos */
+.favorites {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-item button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite-item button:hover {
+  background-color: #e60000;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.favorite-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.favorite-button.favorited {
+  background-color: #dc3545;
+}
+
+.favorite-button:hover {
+  opacity: 0.9;
+}
